@@ -1,0 +1,48 @@
+
+h1 {
+	background-color:darkseagreen;
+	border:2px solid black;
+	color:black;
+	font-size:150%;
+	padding-top:40;
+	padding-left:15;
+	padding-bottom:20;
+}
+h2 {
+	border:2px solid black;
+	padding-top:40;
+	padding-left:15;
+	padding-bottom:120;
+	color:white;
+	font-size:150%;
+    background-image: url("mess.jpg");
+}
+h3 {
+	color:Olive;
+	font-size:120%;
+	padding-top:10;
+	padding-left:15;
+}
+b {
+	color:black;
+}
+body, p, ul, img, iframe {
+	margin-left:45;
+	margin-right:40;
+	font-family:Helvetica;
+}
+
+body {
+  background-color: #;
+  background-image:
+    linear-gradient(rgba(0,0,255,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,255,.15) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+img {
+	width:400;
+}
