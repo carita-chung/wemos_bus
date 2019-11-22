@@ -1,0 +1,52 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="./docs/default.css"></head>
+<body>
+<br>
+<h2>WEMOS Based Bus Schedule InfoBox</h2><br>
+<p>A <font color="red">IOT</font> project</p>
+<p><b>WEMOS WiFi based microcontroller board fetches real-time bus schedule from the internet. Upcoming arrival times for a bus stop are displayed on a Nokia 5110 LCD module. Supports multiple bus routes and bus stop.
+</b></p>
+<br><img src="docs/wemos_bus_p1.jpg"><img src="docs/wemos_bus_p3.jpg"><br><br>
+<br>
+<h3>Description</h3><br>
+<p>The WEMOS is a relatively new mini controller board / module that has WIFI capability. It is also a board that is supported by the Arduino development system. This makes it an ideal system for IOT exploration.</p>
+<br>
+<p>A bus schedule checker is a very useful application as a lot of people rely on bus for transportation on a daily basis.</p>
+<br>
+<h3>Functions, Features and Usage</h3><br>
+<p>The device is to provide the time(s) for the next upcoming buses for a particular bus stop. Upon powering up, the device will try to connect to one of the two pre-defined wifi stations to gain internet access. After connecting to the internet, the device will connect to <b>webservices.nextbus.com/service/</b> for bus schedules.</p>
+<br><img src="docs/wemos_bus_p0.jpg"><br><br>
+<p>Information are shown on a Nokia 5110 LCD module. It has a resolution of 84 x 48 pixels. The bus route and bus stop information are pre-determined at compile time. The device shows bus route number and the current time on the first line of the LCD display. A line graphic is shown on the second line to indicate upcoming bus and the relative time they are arriving to the stop. Upcoming entries with route branch number and time to arrive are shown in line 3 to line 6.</p>
+<br><img src="docs/wemos_bus_p1.jpg"><br><br>
+<p>There is a single button on the device to allow for switching to other bus route and bus stop combinations. It will be useful to have additional setup for an opposite direction stop. They are also pre-determined at compile time. There is no limit on the number of route-stop combinations except they are restricted by memory available. Pressing the button will switch to the next route-stop combination. Bus stop information is display briefly before the display switches to show the newly acquired bus schedule. You can cycle through all the route-stop combinations by pressing the button successively.</P>
+<br><img src="docs/wemos_bus_p2.jpg"><img src="docs/wemos_bus_p3.jpg"><br><br>
+
+<h3>Parts / Bill of Material</h3><br>
+<br><img src="docs/wemos_bus_px.jpg"><br><br>
+<br><br>
+<ul>
+<li>A WEMOS D1 Mini WiFi controller board</li>
+<li>A Nokia 5110 LCD module</li>
+<li>1 tactile button, 6 x 6 2 pin type</li>
+<li>1 small breadboard, 400 points</li>
+<li>About 1 foot of breadboard wire (swg 22)</li>
+</ul>
+</>
+</>
+<p>The only tool that you may need is a pair of wire cutter / strippers</p>
+<h3>Schematic, Source Code and Build Hints</h3><br>
+<br><img src="docs/wemos_bus_schem.png"><br><br>
+<p>WEMOS acts as the core element in the project. Communications with the internet service (bus schedules) are through the built-in WIFI element in the module.</p>
+<br>
+<p>The Nokia 5110 LCD module provides display capability. It is a SPI controlled device. Serialized bitmap data are passed from the WEMOS module via the data and clock pins, with chip-enable (CE), data-command select (D/C) and reset (RST) pins selecting the appropriate operation.</p>
+<br>
+<p>A single tactile button is also wired to accept user input.</p>
+<br><img src="docs/wemos_bus_bb.png"><img src="docs/wemos_bus_bb1.png"><br><br>
+<p>For construction on a 400 point mini breadboard, use the above wiring layout.</p>
+
+<p>
+<a href="https://github.com/carita-chung/wemos_bus/">Arduino source code for this project is here</a></p>
+<br><br><br><br>
+</body>
+</html>
+
